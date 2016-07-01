@@ -3,7 +3,6 @@
 environment:
   matrix:
     - nodejs_version: "6"
-    - nodejs_version: "4"
 
 install:
   # Install Node.js.
@@ -28,12 +27,12 @@ install:
 
 # TODO: Running Jasmine always seems to produce:
 # Error: The specified module could not be found.
-# test_script:
-#   - node --version
-#   - npm --version
-#   - npm --global install jasmine
-#   - npm install bindings
-#   - jasmine
+test_script:
+- node --version
+- npm --version
+- npm --global install jasmine
+- npm install bindings
+- jasmine
 
 # csound-api is built during the install phase.
 build: OFF
